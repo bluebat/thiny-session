@@ -15,28 +15,29 @@ Requires:       volumeicon
 Requires:       batti
 Requires:       tint2
 Requires:       neap
+Requires:       system-config-date
 
 %description
 Thiny is a simple X session, using metacity as Window Manager
 with some GTK-based packages.
 
+You may also need: xdesktopwaves, feh, osmo
+
 %prep
 %setup -q
 
-
 %build
-
 
 %install
 install -Dm755 %{name} %{buildroot}%{_bindir}/%{name}
-install -Dm644 thiny.desktop %{buildroot}%{_datadir}/thiny.desktop
-
+install -Dm644 thiny.desktop %{buildroot}%{_datadir}/xsessions/thiny.desktop
+install -Dm644 tint2rc %{buildroot}%{_datadir}/%{name}/tint2rc
 
 %files
-%doc LICENSE README.md
+%doc LICENSE README.md tint2rc
 %{_bindir}/%{name}
-%{_datadir}/thiny.desktop
-
+%{_datadir}/xsessions/thiny.desktop
+%{_datadir}/%{name}/tint2rc
 
 %changelog
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
