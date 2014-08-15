@@ -1,17 +1,18 @@
 #!/bin/sh
 export DESKTOP_SESSION=thiny
-xprop -root -remove _NET_NUMBER_OF_DESKTOPS \
-            -remove _NET_DESKTOP_NAMES \
-            -remove _NET_CURRENT_DESKTOP 2> /dev/null
+[ -x $HOME/.xprofile ] && $HOME/.xprofile &
+mkdir -p $HOME/.config/tint2
+[ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
 
 start-pulseaudio-x11
 imsettings-switch -n -q -x
 
-tint2 -c /usr/share/thiny-session/tint2rc &
+metacity --composite &
+xdesktopwaves -q 9 -c 5 &
 guake &
 nm-applet &
 volumeicon &
 batti &
-sleep 5 && neap &
+neap &
 
-exec metacity --composite
+exec tint2
