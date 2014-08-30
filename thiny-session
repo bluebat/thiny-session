@@ -1,14 +1,16 @@
 #!/bin/sh
 export DESKTOP_SESSION=thiny
 [ -x $HOME/.xprofile ] && $HOME/.xprofile &
-mkdir -p $HOME/.config/tint2
-[ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
+#examples in .xprofile
+# xrandr -o left
+# $HOME/.dropbox-dist/dropboxd &
+# xdesktopwaves -q 9 -c 5 &
 
 start-pulseaudio-x11
 imsettings-switch -n -q -x
 
 metacity --composite &
-xdesktopwaves -q 9 -c 5 &
+sleep 2
 guake &
 nm-applet &
 volumeicon &

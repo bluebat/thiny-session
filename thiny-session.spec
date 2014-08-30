@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.2
+Version:        0.3
 Release:        1%{?dist}
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -13,17 +13,15 @@ Requires:       guake
 Requires:       network-manager-applet
 Requires:       volumeicon
 Requires:       batti
-Requires:       tint2
 Requires:       neap
-Requires:       xdesktopwaves
-Requires:       system-config-date
+Requires:       tint2
 
 %description
 Thiny is a simple X session, using metacity as Window Manager
 with some GTK-based packages.
 
-You may also need emelfm2, feh, osmo, midori,...
-for a desktop environment.
+You may also need system-config-date, xdesktopwaves, gtk-chtheme,
+emelfm2, leafpad, feh, midori, iptux,... for a desktop environment.
 
 %prep
 %setup -q
@@ -37,11 +35,10 @@ make install DESTDIR=%{buildroot}
 %doc LICENSE README.md
 %{_bindir}/%{name}
 %{_datadir}/xsessions/thiny.desktop
-%{_datadir}/%{name}/tint2rc
 
 %changelog
-* Sat Aug 16 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.2
-- Add Makefile
+* Sat Aug 30 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.3
+- Update to 0.3
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
