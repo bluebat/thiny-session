@@ -3,7 +3,7 @@ export DESKTOP_SESSION=thiny
 [ -x $HOME/.xprofile ] && $HOME/.xprofile &
 #examples in .xprofile
 # xrandr -o left
-# $HOME/.dropbox-dist/dropboxd &
+# dropboxd &
 # xdesktopwaves -q 9 -c 5 &
 
 start-pulseaudio-x11
