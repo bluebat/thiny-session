@@ -3,18 +3,18 @@ export DESKTOP_SESSION=thiny
 [ -x $HOME/.xprofile ] && $HOME/.xprofile &
 #examples in .xprofile
 # xrandr -o left
+# xset -dpms
+# xsettingsd &
 # dropboxd &
 # xdesktopwaves -q 9 -c 5 &
 
 start-pulseaudio-x11
 imsettings-switch -n -q -x
 
-metacity --composite &
-sleep 2
+tint2 &
 guake &
 nm-applet &
 volumeicon &
 batti &
-neap &
 
-exec tint2
+exec metacity --composite

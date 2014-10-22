@@ -3,7 +3,7 @@ DESTDIR=
 PREFIX=/usr
 PACKAGE=thiny-session
 
-all:
+build:
 
 install:
 	install -Dm755 $(PACKAGE) $(DESTDIR)$(PREFIX)/bin/$(PACKAGE)
