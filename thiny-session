@@ -5,7 +5,7 @@ export DESKTOP_SESSION=thiny
 # xrandr -o left
 # xset -dpms
 # xsettingsd &
-# dropboxd &
+# x11vnc &
 # xdesktopwaves -q 9 -c 5 &
 
 start-pulseaudio-x11
