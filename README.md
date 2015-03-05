@@ -1,4 +1,4 @@
-thiny-session
+Thiny Session
 =============
 
 A Thin and Tiny Session for X
