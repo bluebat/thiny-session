@@ -12,14 +12,15 @@ Requires:       imsettings
 Requires:       guake
 Requires:       network-manager-applet
 Requires:       volumeicon
-Requires:       batti
 Requires:       tint2
+Requires:       nitrogen
 
 %description
 Thiny is a simple X session, using metacity as Window Manager
 with some GTK-based packages and supporting $HOME/.xprofile
 
-You may also need system-config-date, xdesktopwaves, gtk-chtheme,
+You may also need joe, scrot,... for command-line tools, and
+xcalc, system-config-date, xdesktopwaves, gtk-chtheme,
 emelfm2, leafpad, feh, midori, iptux,... for a desktop environment.
 
 %prep
