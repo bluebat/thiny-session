@@ -21,7 +21,7 @@ with some GTK-based packages and supporting $HOME/.xprofile
 
 You may also need joe, scrot,... for command-line tools, and
 xcalc, system-config-date, xdesktopwaves, gtk-chtheme,
-emelfm2, leafpad, feh, midori, iptux,... for a desktop environment.
+emelfm2, leafpad, viewnior, midori, iptux,... for a desktop environment.
 
 %prep
 %setup -q

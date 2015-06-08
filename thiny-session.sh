@@ -8,7 +8,7 @@ mkdir -p $HOME/.config/tint2
 # xset -dpms
 # xset s off
 # xsettingsd &
-# x11vnc &
+# x11vnc -forever -repeat -password ******** &
 # xdesktopwaves -q 9 -c 5 &
 
 nitrogen --restore
