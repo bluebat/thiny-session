@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.4
+Version:        0.5
 Release:        1%{?dist}
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
