@@ -14,14 +14,17 @@ Requires:       network-manager-applet
 Requires:       volumeicon
 Requires:       tint2
 Requires:       nitrogen
+Requires:       joe
+Requires:       viewnior
+Requires:       scrot
 
 %description
 Thiny is a simple X session, using metacity as Window Manager
 with some GTK-based packages and supporting $HOME/.xprofile
 
-You may also need joe, scrot,... for command-line tools, and
-xcalc, system-config-date, xdesktopwaves, gtk-chtheme,
-emelfm2, leafpad, viewnior, midori, iptux,... for a desktop environment.
+You may also need xcalc, system-config-date, xdesktopwaves,
+gtk-chtheme, emelfm2, leafpad, midori, iptux,... for a desktop
+environment.
 
 %prep
 %setup -q
@@ -37,8 +40,8 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/xsessions/thiny.desktop
 
 %changelog
-* Wed Jan 28 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.4
-- Update to 0.4
+* Mon Jul 06 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5
+- Update to 0.5
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
