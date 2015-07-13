@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.5
+Version:        0.5.1
 Release:        1%{?dist}
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -15,7 +15,7 @@ Requires:       volumeicon
 Requires:       tint2
 Requires:       nitrogen
 Requires:       joe
-Requires:       viewnior
+Requires:       feh
 Requires:       scrot
 
 %description
@@ -38,10 +38,11 @@ make install DESTDIR=%{buildroot}
 %doc LICENSE README.md
 %{_bindir}/%{name}
 %{_datadir}/xsessions/thiny.desktop
+%{_datadir}/%{name}
 
 %changelog
-* Mon Jul 06 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5
-- Update to 0.5
+* Mon Jul 13 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.1
+- Update to 0.5.1
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
