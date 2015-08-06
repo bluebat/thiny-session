@@ -1,4 +1,4 @@
-"scrot -q 100 -e feh"
+"scrot -q 100 -d 2 -e feh"
   m:0x0 + c:107
 
 "scrot -q 100 -s -e feh"
