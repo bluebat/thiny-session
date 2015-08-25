@@ -1,4 +1,4 @@
-VERSION=0.5.2
+VERSION=0.5.3
 DESTDIR=
 PREFIX=/usr
 PACKAGE=thiny-session
@@ -23,5 +23,6 @@ clean:
 
 rpm:
 	rsync -avh --delete . $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION)
+	rm -rf $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION)/.git
 	tar czvf $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION).tar.gz -C $(HOME)/rpmbuild/SOURCES $(PACKAGE)-$(VERSION)
 	rpmbuild -ta $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION).tar.gz

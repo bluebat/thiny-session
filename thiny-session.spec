@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.5.2
+Version:        0.5.3
 Release:        1%{?dist}
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -14,22 +14,24 @@ Requires:       greybird-metacity-theme
 Requires:       guake
 Requires:       network-manager-applet
 Requires:       volumeicon
+Requires:       pavucontrol
 Requires:       tint2
-Requires:       system-config-date
+Requires:       system-config-printer
 Requires:       desktop-backgrounds-compat
 Requires:       nitrogen
 Requires:       joe
-Requires:       feh
+Requires:       viewnior
 Requires:       scrot
 Requires:       gst123
+Requires:       spacefm
+Requires:       midori
+Requires:       galculator
+Requires:       system-config-printer
 
 %description
-Thiny is a simple X session, using metacity as Window Manager
-with some GTK-based packages and supporting $HOME/.xprofile
-
-You may also need xcalc, system-config-printer, xdesktopwaves,
-gtk-chtheme, spacefm, leafpad, midori, iptux,... for a desktop
-environment.
+Thiny is a simple X session, using metacity as Window Manager with some
+GTK-based packages and supporting $HOME/.xprofile. You may also need
+xdesktopwaves, gtk-chtheme, leafpad, iptux,... for a desktop environment.
 
 %prep
 %setup -q
@@ -46,8 +48,8 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Thu Aug 06 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.2
-- Update to 0.5.2
+* Mon Aug 24 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.3
+- Update to 0.5.3
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
