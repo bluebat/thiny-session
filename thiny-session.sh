@@ -16,6 +16,9 @@ mkdir -p $HOME/.config/nitrogen
 # xsettingsd &
 # x11vnc -forever -repeat -passwd ******** &
 # xdesktopwaves -q 9 -c 5 &
+# gcountdown &
+# $HOME/.dropbox-dist/dropboxd &
+# $HOME/.TelegramDesktop/Telegram -noupdate &
 
 xbindkeys
 nitrogen --restore
