@@ -1,5 +1,0 @@
-"scrot -q 100 -d 2 -e 'viewnior $f'"
-  m:0x0 + c:107
-
-"scrot -q 100 -s -e 'viewnior $f'"
-  m:0x8 + c:107

@@ -5,7 +5,7 @@ mkdir -p $HOME/.config/tint2
 [ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
 mkdir -p $HOME/.config/nitrogen
 [ -f $HOME/.config/nitrogen/bg-saved.cfg ] || cp /usr/share/thiny-session/bg-saved.cfg $HOME/.config/nitrogen/
-[ -f $HOME/.xbindkeysrc ] || cp /usr/share/thiny-session/xbindkeysrc $HOME/.xbindkeysrc
+[ -f $HOME/.xhotkeys ] || cp /usr/share/thiny-session/xhotkeys $HOME/.xhotkeys
 
 [ -x $HOME/.xprofile ] && $HOME/.xprofile
 #examples in .xprofile
@@ -16,10 +16,10 @@ mkdir -p $HOME/.config/nitrogen
 # xsettingsd &
 # x11vnc -forever -repeat -passwd ******** &
 # xdesktopwaves -q 9 -c 5 &
+# parcellite &
 # $HOME/.dropbox-dist/dropboxd &
 # $HOME/.TelegramDesktop/Telegram -noupdate &
 
-xbindkeys
 nitrogen --restore
 start-pulseaudio-x11
 imsettings-switch -n -q -x
@@ -29,4 +29,5 @@ guake &
 nm-applet &
 volumeicon &
 
+sleep 5 && xhotkeys &
 exec metacity --composite
