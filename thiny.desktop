@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=thiny
+Name=Thiny
 Comment=A Thin and Tiny X Session
 TryExec=thiny-session
 Exec=thiny-session

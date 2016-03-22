@@ -1,6 +1,6 @@
 Name:           thiny-session
 Version:        0.5.5
-Release:        1%{?dist}
+Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
 License:        CC0
