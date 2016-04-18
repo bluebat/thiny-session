@@ -1,5 +1,6 @@
 #!/bin/sh
 export DESKTOP_SESSION=thiny
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 gsettings set org.gnome.desktop.wm.preferences theme Greybird
 mkdir -p $HOME/.config/tint2
 [ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
@@ -30,4 +31,4 @@ nm-applet &
 volumeicon &
 
 sleep 5 && xhotkeys &
-exec metacity --composite
+exec metacity --no-composite
