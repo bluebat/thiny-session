@@ -9,11 +9,11 @@ Source0:        %{name}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:       notification-daemon
 Requires:       pulseaudio-module-x11
-Requires:       imsettings
 Requires:       metacity
 Requires:       greybird-metacity-theme
 Requires:       guake
 Requires:       network-manager-applet
+Requires:       NetworkManager-wifi
 Requires:       volumeicon
 Requires:       pavucontrol
 Requires:       tint2
@@ -32,6 +32,7 @@ Requires:       arandr
 Requires:       mupdf
 Requires:       xhotkeys
 Requires:       leafpad
+Requires:       camorama
 
 %description
 Thiny is a simple X session, using metacity as Window Manager with some
@@ -52,7 +53,7 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Tue Dec 09 2015 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.5
+* Thu Jun 30 2016 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.5
 - Update to 0.5.5
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1

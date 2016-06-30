@@ -20,10 +20,10 @@ mkdir -p $HOME/.config/nitrogen
 # parcellite &
 # $HOME/.dropbox-dist/dropboxd &
 # $HOME/.TelegramDesktop/Telegram -noupdate &
+# imsettings-switch -n -q -x
 
 nitrogen --restore
 start-pulseaudio-x11
-imsettings-switch -n -q -x
 
 tint2 &
 guake &
