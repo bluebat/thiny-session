@@ -14,6 +14,8 @@ Requires:       greybird-metacity-theme
 Requires:       guake
 Requires:       network-manager-applet
 Requires:       NetworkManager-wifi
+Requires:       xsettingsd
+Requires:       imsettings-gsettings
 Requires:       volumeicon
 Requires:       pavucontrol
 Requires:       tint2
