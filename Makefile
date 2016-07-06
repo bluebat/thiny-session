@@ -10,6 +10,7 @@ install:
 	install -Dm644 thiny.desktop $(DESTDIR)$(PREFIX)/share/xsessions/thiny.desktop
 	install -Dm644 tint2rc $(DESTDIR)$(PREFIX)/share/thiny-session/tint2rc
 	install -Dm644 bg-saved.cfg $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
+	install -Dm755 settings.sh $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
 	install -Dm644 xhotkeys $(DESTDIR)$(PREFIX)/share/thiny-session/xhotkeys
 
 uninstall:
@@ -17,6 +18,7 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/share/xsessions/thiny.desktop
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/tint2rc
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
+	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/xhotkeys
 
 clean:

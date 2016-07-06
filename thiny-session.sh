@@ -1,8 +1,7 @@
 #!/bin/sh
 export DESKTOP_SESSION=thiny
-touch $HOME/.xsettingsd && xsettingsd &
-gsettings set org.gnome.desktop.interface gtk-theme Adwaita
-gsettings set org.gnome.desktop.wm.preferences theme Greybird
+[ -f $HOME/.xsettingsd ] || /usr/share/thiny-session/settings.sh
+xsettingsd &
 mkdir -p $HOME/.config/tint2
 [ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
 mkdir -p $HOME/.config/nitrogen
@@ -15,6 +14,8 @@ mkdir -p $HOME/.config/nitrogen
 # xset -dpms
 # xset s off
 # xbacklight -set 100
+# gsettings set org.gnome.desktop.interface gtk-theme Bluecurve
+# gsettings set org.gnome.desktop.wm.preferences theme Bluecurve
 # x11vnc -forever -repeat -passwd ******** &
 # xdesktopwaves -q 9 -c 5 &
 # parcellite &
