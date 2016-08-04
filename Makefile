@@ -1,7 +1,7 @@
-VERSION=0.5.6
-DESTDIR=
-PREFIX=/usr
-PACKAGE=thiny-session
+VERSION = 0.5.6
+DESTDIR =
+PREFIX = /usr
+PACKAGE = thiny-session
 
 build:
 
