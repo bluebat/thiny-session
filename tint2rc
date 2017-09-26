@@ -116,7 +116,7 @@ time2_font = sans 8
 clock_font_color = #FFFFFF 100
 clock_padding = 1 0
 clock_background_id = 0
-clock_rclick_command = system-config-date
+#clock_rclick_command = system-config-date
 
 # Tooltips
 tooltip_padding = 2 2

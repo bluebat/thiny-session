@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.5.6
+Version:        0.6.0
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -19,10 +19,12 @@ Requires:       imsettings-gsettings
 Requires:       volumeicon
 Requires:       pavucontrol
 Requires:       tint2
-Requires:       system-config-date
+#Requires:       system-config-date
+Requires:       ntpdate
 Requires:       desktop-backgrounds-compat
 Requires:       nitrogen
 Requires:       joe
+Requires:       wget
 Requires:       viewnior
 Requires:       scrot
 Requires:       gst123
@@ -35,6 +37,11 @@ Requires:       mupdf
 Requires:       xhotkeys
 Requires:       leafpad
 Requires:       camorama
+Requires:       gshutdown
+Requires:       alltray
+Requires:       xinput_calibrator
+Requires:       gftp
+Requires:       upower
 
 %description
 Thiny is a simple X session, using metacity as Window Manager with some
@@ -55,8 +62,8 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Thu Jun 30 2016 Wei-Lun Chao <bluebat@member.fsf.org> - 0.5.6
-- Update to 0.5.6
+* Fri Sep 22 2017 Wei-Lun Chao <bluebat@member.fsf.org> - 0.6.0
+- Update package
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package

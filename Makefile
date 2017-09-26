@@ -1,4 +1,4 @@
-VERSION = 0.5.6
+VERSION = 0.6.0
 DESTDIR =
 PREFIX = /usr
 PACKAGE = thiny-session
@@ -23,7 +23,7 @@ uninstall:
 
 clean:
 
-rpm:
+rpm: $(PACKAGE).spec
 	rsync -aC --delete . $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION)
 	tar czf $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION).tar.gz -C $(HOME)/rpmbuild/SOURCES $(PACKAGE)-$(VERSION)
 	rpmbuild -ta $(HOME)/rpmbuild/SOURCES/$(PACKAGE)-$(VERSION).tar.gz

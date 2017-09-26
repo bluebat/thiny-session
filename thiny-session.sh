@@ -8,6 +8,10 @@ mkdir -p $HOME/.config/nitrogen
 [ -f $HOME/.config/nitrogen/bg-saved.cfg ] || cp /usr/share/thiny-session/bg-saved.cfg $HOME/.config/nitrogen/
 [ -f $HOME/.xhotkeys ] || cp /usr/share/thiny-session/xhotkeys $HOME/.xhotkeys
 
+nitrogen --restore
+start-pulseaudio-x11
+imsettings-switch -n -q -x
+
 [ -x $HOME/.xprofile ] && $HOME/.xprofile
 #examples in .xprofile
 # xrandr -o left
@@ -22,14 +26,10 @@ mkdir -p $HOME/.config/nitrogen
 # $HOME/.dropbox-dist/dropboxd &
 # $HOME/.TelegramDesktop/Telegram -noupdate &
 
-nitrogen --restore
-start-pulseaudio-x11
-imsettings-switch -n -q -x
-
 tint2 &
 guake &
 nm-applet &
 volumeicon &
-
+alltray -x -nt gshutdown &
 sleep 10 && xhotkeys &
-exec metacity --no-composite
+exec metacity --composite
