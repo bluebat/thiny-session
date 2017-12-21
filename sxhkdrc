@@ -1,0 +1,4 @@
+Print
+	scrot -q 100 -d 2 -e 'viewnior $f'
+alt + Print
+	scrot -q 100 -s -e 'viewnior $f'

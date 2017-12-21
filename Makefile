@@ -11,7 +11,7 @@ install:
 	install -Dm644 tint2rc $(DESTDIR)$(PREFIX)/share/thiny-session/tint2rc
 	install -Dm644 bg-saved.cfg $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
 	install -Dm755 settings.sh $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
-	install -Dm644 xhotkeys $(DESTDIR)$(PREFIX)/share/thiny-session/xhotkeys
+	install -Dm644 sxhkdrc $(DESTDIR)$(PREFIX)/share/thiny-session/sxhkdrc
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/$(PACKAGE)
@@ -19,7 +19,7 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/tint2rc
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
-	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/xhotkeys
+	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/sxhkdrc
 
 clean:
 

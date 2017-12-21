@@ -6,7 +6,7 @@ mkdir -p $HOME/.config/tint2
 [ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
 mkdir -p $HOME/.config/nitrogen
 [ -f $HOME/.config/nitrogen/bg-saved.cfg ] || cp /usr/share/thiny-session/bg-saved.cfg $HOME/.config/nitrogen/
-[ -f $HOME/.xhotkeys ] || cp /usr/share/thiny-session/xhotkeys $HOME/.xhotkeys
+[ -f $HOME/.config/sxhkd/sxhkdrc ] || cp /usr/share/thiny-session/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 nitrogen --restore
 start-pulseaudio-x11
@@ -31,5 +31,5 @@ guake &
 nm-applet &
 volumeicon &
 alltray -x -nt gshutdown &
-sleep 10 && xhotkeys &
+sxhkd &
 exec metacity --composite

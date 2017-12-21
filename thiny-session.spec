@@ -34,7 +34,7 @@ Requires:       galculator
 Requires:       system-config-printer
 Requires:       arandr
 Requires:       mupdf
-Requires:       xhotkeys
+Requires:       sxhkd
 Requires:       leafpad
 Requires:       camorama
 Requires:       gshutdown
@@ -62,7 +62,7 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Fri Sep 22 2017 Wei-Lun Chao <bluebat@member.fsf.org> - 0.6.0
+* Thu Dec 21 2017 Wei-Lun Chao <bluebat@member.fsf.org> - 0.6.0
 - Update package
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
