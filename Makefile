@@ -12,6 +12,7 @@ install:
 	install -Dm644 bg-saved.cfg $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
 	install -Dm755 settings.sh $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
 	install -Dm644 sxhkdrc $(DESTDIR)$(PREFIX)/share/thiny-session/sxhkdrc
+	install -Dm644 gshutdown $(DESTDIR)$(PREFIX)/share/thiny-session/gshutdown
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/$(PACKAGE)
@@ -20,6 +21,7 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/bg-saved.cfg
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/settings.sh
 	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/sxhkdrc
+	rm -f $(DESTDIR)$(PREFIX)/share/thiny-session/gshutdown
 
 clean:
 

@@ -7,6 +7,7 @@ mkdir -p $HOME/.config/tint2
 mkdir -p $HOME/.config/nitrogen
 [ -f $HOME/.config/nitrogen/bg-saved.cfg ] || cp /usr/share/thiny-session/bg-saved.cfg $HOME/.config/nitrogen/
 [ -f $HOME/.config/sxhkd/sxhkdrc ] || cp /usr/share/thiny-session/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+[ -f $HOME/.gshutdown ] || cp /usr/share/thiny-session/gshutdown $HOME/.gshutdown
 
 nitrogen --restore
 start-pulseaudio-x11
