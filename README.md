@@ -1,4 +1,4 @@
-![screenshot](https://github.com/bluebat/thiny-session/releases/download/v0.5.6/thiny-session.png)
+![thiny-session](https://user-images.githubusercontent.com/6536345/38005123-0eba59f4-3272-11e8-9927-0a4d4d5c2a99.png)
 
 Thiny Session
 =============
