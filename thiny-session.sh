@@ -21,6 +21,7 @@ imsettings-switch -n -q -x
 # xbacklight -set 100
 # gsettings set org.gnome.desktop.interface gtk-theme Bluecurve
 # gsettings set org.gnome.desktop.wm.preferences theme Bluecurve
+# synclient touchpadoff=`lsusb|grep -i mouse|wc -l`
 # x11vnc -forever -repeat -passwd ******** &
 # xdesktopwaves -q 9 -c 5 &
 # parcellite &
@@ -33,4 +34,8 @@ nm-applet &
 volumeicon &
 alltray -x -nt gshutdown &
 sxhkd &
-exec metacity --composite
+if pgrep 'xdesktopwaves|xpenguins|xsnow' ; then
+  exec metacity --no-composite
+else
+  exec metacity --composite
+fi

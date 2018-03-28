@@ -42,6 +42,7 @@ Requires:       alltray
 Requires:       xinput_calibrator
 Requires:       gftp
 Requires:       upower
+Requires:       xorg-x11-drivers
 
 %description
 Thiny is a simple X session, using metacity as Window Manager with some
