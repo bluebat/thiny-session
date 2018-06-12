@@ -36,7 +36,7 @@ border_color = #999999 100
 panel_items = TSBLC
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 94% 36
+panel_size = 94% 40
 panel_margin = 0 0
 panel_padding = 7 0 7
 panel_dock = 0
@@ -105,7 +105,7 @@ mouse_scroll_down = iconify
 systray_padding = 0 4 5
 systray_sort = ascending
 systray_background_id = 0
-systray_icon_size = 24
+systray_icon_size = 26
 systray_icon_asb = 70 0 0
 
 # Clock

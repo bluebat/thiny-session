@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.6.0
+Version:        0.7.0
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -63,7 +63,7 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Thu Dec 21 2017 Wei-Lun Chao <bluebat@member.fsf.org> - 0.6.0
+* Tue Jun 12 2018 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.0
 - Update package
 
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1

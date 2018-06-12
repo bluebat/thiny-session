@@ -2,9 +2,8 @@
 export DESKTOP_SESSION=thiny
 [ -f $HOME/.xsettingsd ] || /usr/share/thiny-session/settings.sh
 xsettingsd &
-mkdir -p $HOME/.config/tint2
+mkdir -p $HOME/.config/tint2 $HOME/.config/nitrogen $HOME/.config/sxhkd
 [ -f $HOME/.config/tint2/tint2rc ] || cp /usr/share/thiny-session/tint2rc $HOME/.config/tint2/
-mkdir -p $HOME/.config/nitrogen
 [ -f $HOME/.config/nitrogen/bg-saved.cfg ] || cp /usr/share/thiny-session/bg-saved.cfg $HOME/.config/nitrogen/
 [ -f $HOME/.config/sxhkd/sxhkdrc ] || cp /usr/share/thiny-session/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 [ -f $HOME/.gshutdown ] || cp /usr/share/thiny-session/gshutdown $HOME/.gshutdown
