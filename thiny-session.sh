@@ -1,5 +1,6 @@
 #!/bin/sh
 export DESKTOP_SESSION=thiny
+/usr/libexec/notification-daemon &
 [ -f $HOME/.xsettingsd ] || /usr/share/thiny-session/settings.sh
 xsettingsd &
 mkdir -p $HOME/.config/tint2 $HOME/.config/nitrogen $HOME/.config/sxhkd
