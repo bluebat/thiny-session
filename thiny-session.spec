@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.7.1
+Version:        0.7.2
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -56,6 +56,9 @@ GTK-based packages and supporting $HOME/.xprofile.
 %install
 make install DESTDIR=%{buildroot}
 
+%post
+sed -i 's|xorg|display-manager|' /usr/lib/systemd/system/sxhkd.service
+
 %files
 %doc LICENSE README.md
 %{_bindir}/%{name}
@@ -63,8 +66,7 @@ make install DESTDIR=%{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Fri Nov 16 2018 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.1
+* Wed Nov 28 2018 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.2
 - Update package
-
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
