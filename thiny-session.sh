@@ -9,7 +9,6 @@ mkdir -p $HOME/.config/tint2 $HOME/.config/nitrogen $HOME/.config/sxhkd
 [ -f $HOME/.config/sxhkd/sxhkdrc ] || cp /usr/share/thiny-session/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 [ -f $HOME/.gshutdown ] || cp /usr/share/thiny-session/gshutdown $HOME/.gshutdown
 
-nitrogen --restore
 start-pulseaudio-x11
 imsettings-switch -n -q -x
 
@@ -23,18 +22,19 @@ imsettings-switch -n -q -x
 # gsettings set org.gnome.desktop.wm.preferences theme Bluecurve
 # synclient touchpadoff=`lsusb|grep -i mouse|wc -l`
 # x11vnc -forever -repeat -passwd ******** &
-# xdesktopwaves -q 9 -c 5 &
 # parcellite &
 # $HOME/.dropbox-dist/dropboxd &
 # $HOME/.TelegramDesktop/Telegram -noupdate &
 
+nitrogen --restore
 tint2 &
 guake &
 nm-applet &
+#blueman-applet &
 volumeicon &
 alltray -x -nt gshutdown &
 sxhkd &
-if pgrep 'xdesktopwaves|xpenguins|xsnow|xcockroach|xfireworks|xfishtank' ; then
+if pgrep 'xdesktopwaves|xpenguins|xsnow|xcockroach|xfireworks|xfishtank|xwinwrap' ; then
   exec metacity --no-composite
 else
   exec metacity --composite

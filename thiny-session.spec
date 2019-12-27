@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.7.2
+Version:        0.7.3
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -14,6 +14,8 @@ Requires:       greybird-metacity-theme
 Requires:       guake
 Requires:       network-manager-applet
 Requires:       NetworkManager-wifi
+#Requires:       blueman
+#Requires:       NetworkManager-bluetooth
 Requires:       xsettingsd
 Requires:       imsettings-gsettings
 Requires:       volumeicon
@@ -23,26 +25,26 @@ Requires:       tint2
 Requires:       ntpdate
 Requires:       desktop-backgrounds-compat
 Requires:       nitrogen
-Requires:       joe
-Requires:       wget
-Requires:       viewnior
-Requires:       scrot
-Requires:       gst123
-Requires:       spacefm
-Requires:       midori
-Requires:       galculator
-Requires:       system-config-printer
-Requires:       arandr
-Requires:       mupdf
-Requires:       sxhkd
-Requires:       leafpad
-Requires:       camorama
-Requires:       gshutdown
-Requires:       alltray
-Requires:       xinput_calibrator
-Requires:       gftp
-Requires:       upower
 Requires:       xorg-x11-drivers
+Requires:       alltray
+Requires:       gshutdown
+Requires:       sxhkd
+Requires:       scrot
+Requires:       viewnior
+Recommends:     joe
+Recommends:     wget
+Recommends:     gst123
+Recommends:     spacefm
+Recommends:     midori
+Recommends:     galculator
+Recommends:     system-config-printer
+Recommends:     arandr
+Recommends:     mupdf
+Recommends:     leafpad
+Recommends:     camorama
+Recommends:     xinput_calibrator
+Recommends:     gftp
+Recommends:     upower
 
 %description
 Thiny is a simple X session, using metacity as Window Manager with some
@@ -66,7 +68,7 @@ sed -i 's|xorg|display-manager|' /usr/lib/systemd/system/sxhkd.service
 %{_datadir}/%{name}
 
 %changelog
-* Wed Nov 28 2018 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.2
+* Fri Dec 27 2019 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.3
 - Update package
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
