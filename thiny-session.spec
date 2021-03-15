@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.7.3
+Version:        0.7.4
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -8,7 +8,7 @@ URL:            https://github.com/bluebat/thiny-session
 Source0:        %{name}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:       notification-daemon
-Requires:       pulseaudio-module-x11
+#Requires:       pulseaudio-module-x11
 Requires:       metacity
 Requires:       greybird-metacity-theme
 Requires:       guake
@@ -22,7 +22,7 @@ Requires:       volumeicon
 Requires:       pavucontrol
 Requires:       tint2
 #Requires:       system-config-date
-Requires:       ntpdate
+Requires:       /usr/sbin/ntpdate
 Requires:       desktop-backgrounds-compat
 Requires:       nitrogen
 Requires:       xorg-x11-drivers
@@ -68,7 +68,7 @@ sed -i 's|xorg|display-manager|' /usr/lib/systemd/system/sxhkd.service
 %{_datadir}/%{name}
 
 %changelog
-* Fri Dec 27 2019 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.3
+* Mon Mar 15 2021 Wei-Lun Chao <bluebat@member.fsf.org> - 0.7.4
 - Update package
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
