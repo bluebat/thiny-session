@@ -10,7 +10,7 @@ mkdir -p $HOME/.config/tint2 $HOME/.config/nitrogen $HOME/.config/sxhkd
 [ -f $HOME/.config/sxhkd/sxhkdrc ] || cp /usr/share/thiny-session/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 [ -f $HOME/.gshutdown ] || cp /usr/share/thiny-session/gshutdown $HOME/.gshutdown
 
-if which start-pulseaudio-x11 &>/dev/null then
+if which start-pulseaudio-x11 &>/dev/null ; then
   start-pulseaudio-x11
 else
   pipewire-pulse &
