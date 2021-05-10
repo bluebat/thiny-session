@@ -39,7 +39,7 @@ nm-applet &
 #blueman-applet &
 alltray -x -nt gshutdown &
 sxhkd &
-volumeicon &
+(volumeicon -d hw:0 || volumeicon -d hw:1) &
 if pgrep 'xdesktopwaves|xpenguins|xsnow|xcockroach|xfireworks|xfishtank|xwinwrap' ; then
   exec metacity --no-composite
 else
