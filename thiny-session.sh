@@ -13,6 +13,7 @@ mkdir -p $HOME/.config/tint2 $HOME/.config/nitrogen $HOME/.config/sxhkd
 if which start-pulseaudio-x11 &>/dev/null ; then
   start-pulseaudio-x11
 else
+  pipewire-media-session &
   pipewire-pulse &
 fi
 imsettings-switch -n -q -x
@@ -34,12 +35,12 @@ imsettings-switch -n -q -x
 
 nitrogen --restore
 tint2 &
-guake &
 nm-applet &
 #blueman-applet &
 alltray -x -nt gshutdown &
 sxhkd &
-(volumeicon -d hw:0 || volumeicon -d hw:1) &
+volumeicon &
+guake &
 if pgrep 'xdesktopwaves|xpenguins|xsnow|xcockroach|xfireworks|xfishtank|xwinwrap' ; then
   exec metacity --no-composite
 else
