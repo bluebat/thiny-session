@@ -25,6 +25,7 @@ imsettings-switch -n -q -x
 # xset s off
 # xbacklight -set 100
 # gsettings set org.gnome.desktop.interface gtk-theme Bluecurve
+# gsettings set org.gnome.desktop.interface icon-theme Bluecurve
 # gsettings set org.gnome.desktop.wm.preferences theme Bluecurve
 # synclient touchpadoff=`lsusb|grep -i mouse|wc -l`
 # x11vnc -forever -repeat -passwd ******** &
@@ -37,7 +38,7 @@ nitrogen --restore
 tint2 &
 nm-applet &
 #blueman-applet &
-alltray -x -nt gshutdown &
+gshutdown -m &
 sxhkd &
 volumeicon &
 guake &
