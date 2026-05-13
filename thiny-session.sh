@@ -16,9 +16,10 @@ else
   pipewire-media-session &
   pipewire-pulse &
 fi
-imsettings-switch -n -q -x
+#imsettings-switch -n -q -x
+imsettings-boot.sh
 
-[ -x $HOME/.xprofile ] && $HOME/.xprofile
+[ -f $HOME/.xprofile ] && . $HOME/.xprofile
 #examples in .xprofile
 # xrandr -o left
 # xset -dpms
@@ -27,6 +28,7 @@ imsettings-switch -n -q -x
 # gsettings set org.gnome.desktop.interface gtk-theme Bluecurve
 # gsettings set org.gnome.desktop.interface icon-theme Bluecurve
 # gsettings set org.gnome.desktop.wm.preferences theme Bluecurve
+# setxkbmap -option keypad:pointerkeys
 # synclient touchpadoff=`lsusb|grep -i mouse|wc -l`
 # x11vnc -forever -repeat -passwd ******** &
 # parcellite &
@@ -34,13 +36,15 @@ imsettings-switch -n -q -x
 # $HOME/.dropbox-dist/dropboxd &
 # $HOME/.TelegramDesktop/Telegram -noupdate &
 
+#systemctl --user start xdg-desktop-autostart.target
 nitrogen --restore
 tint2 &
 nm-applet &
 #blueman-applet &
 gshutdown -m &
 sxhkd &
-volumeicon &
+#volumeicon &
+pasystray &
 guake &
 if pgrep 'xdesktopwaves|xpenguins|xsnow|xcockroach|xfireworks|xfishtank|xwinwrap' ; then
   exec metacity --no-composite

@@ -1,5 +1,5 @@
 Name:           thiny-session
-Version:        0.8.0
+Version:        0.9.0
 Release:        1
 Summary:        A Thin and Tiny Session for X
 Group:		User Interface/Desktops
@@ -18,14 +18,18 @@ Requires:       NetworkManager-wifi
 #Requires:       NetworkManager-bluetooth
 Requires:       xsettingsd
 Requires:       imsettings-gsettings
-Requires:       volumeicon
+#Requires:       volumeicon
+Requires:       pasystray
 Requires:       pavucontrol
 Requires:       tint2
 #Requires:       system-config-date
 Requires:       /usr/sbin/ntpdate
 Requires:       desktop-backgrounds-compat
 Requires:       nitrogen
-Requires:       xorg-x11-drivers
+#Requires:       xorg-x11-drivers
+Requires:       libva-intel-driver
+Requires:       libva-intel-hybrid-driver
+Requires:       libva-vdpau-driver
 Requires:       gshutdown
 Requires:       sxhkd
 Requires:       scrot
@@ -44,6 +48,7 @@ Recommends:     camorama
 Recommends:     xinput_calibrator
 Recommends:     gftp
 Recommends:     upower
+Recommends:     brasero
 
 %description
 Thiny is a simple X session, using metacity as Window Manager with some
@@ -67,7 +72,7 @@ sed -i 's|xorg|display-manager|' /usr/lib/systemd/system/sxhkd.service
 %{_datadir}/%{name}
 
 %changelog
-* Sun Oct 16 2022 Wei-Lun Chao <bluebat@member.fsf.org> - 0.8.0
+* Wed May 13 2026 Wei-Lun Chao <bluebat@member.fsf.org> - 0.9.0
 - Rebuilt for Fedora
 * Sun Aug 10 2014 Wei-Lun Chao <bluebat@member.fsf.org> - 0.1
 - Initial package
